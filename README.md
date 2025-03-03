@@ -1,3 +1,10 @@
+# 光赛底盘PID控制
+## 实现功能
+* 从其他算法得到期待速度target，自动计算需要输出的pwm，并操作电机实现小车控制
+## 潜在问题
+* 麦轮建模理论需要验证
+* 调参
+* 可能存在的逻辑错误或stm32交互上的错误
 # 麦轮建模
 
 含有 //@@@ 注释的参数为待测或待实验参数
@@ -12,8 +19,20 @@
 * R是单个麦轮到车中心的距离
 * 建模参考https://blog.csdn.net/u014453443/article/details/107228531?sharetype=blog&shareId=107228531&sharerefer=APP&sharesource=2403_88153395&sharefrom=qq
 
+示意图：
+
+B-x-A
+
+y-*--
+
+C---D
+
+
+
 # 接线方案
 接线参考[mecanum_pid_3.ioc](mecanum_pid_3.ioc)中的引脚名称
 
 # 核心流程
 参考[robot.cpp](Core/Src/robot.cpp)中robot_control函数的注释
+
+## 理论完成，等着实践修bug吧
