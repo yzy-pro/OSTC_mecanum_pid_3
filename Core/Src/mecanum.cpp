@@ -1,6 +1,6 @@
 #include "mecanum.h"
 #include "robot.h"
-#include "math.h"
+#include <cmath>
 
 Wheel_condition Robot2Wheel(Robot_condition Robot)
 {

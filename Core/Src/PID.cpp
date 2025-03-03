@@ -28,7 +28,7 @@ int velocity_PID(float target, float current)
     return pwm_velocity;
 }
 
-Wheel_pwm velovity_control(Wheel_condition target, Wheel_condition current)
+Wheel_pwm velocity_control(Wheel_condition target, Wheel_condition current)
 {
 
     int pwm_A = velocity_PID(target.A_velocity, current.A_velocity);
