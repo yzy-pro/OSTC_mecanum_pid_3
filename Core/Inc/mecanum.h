@@ -5,8 +5,8 @@
 extern "C" {
 #endif
 
-
-
+#include <cmath>
+#include "robot.h"
 
 #ifdef __cplusplus
 }
