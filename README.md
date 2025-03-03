@@ -14,3 +14,6 @@
 
 # 接线方案
 接线参考[mecanum_pid_3.ioc](mecanum_pid_3.ioc)中的引脚名称
+
+# 核心流程
+参考[robot.cpp](Core/Src/robot.cpp)中robot_control函数的注释

@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "robot.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -99,8 +99,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
+    //假定我通过其他部分的代码算出来我期望的速度是什么
+    //@@@
+    Settings mysetting = {0, 0, 0};
+    robot_control(mysetting);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

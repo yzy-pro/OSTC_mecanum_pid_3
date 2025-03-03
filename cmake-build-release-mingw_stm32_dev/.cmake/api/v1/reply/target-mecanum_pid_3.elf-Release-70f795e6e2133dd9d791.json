@@ -28,25 +28,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 74,
+				"line" : 64,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 70,
+				"line" : 60,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 71,
+				"line" : 61,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 72,
+				"line" : 62,
 				"parent" : 0
 			},
 			{
@@ -428,56 +428,6 @@
 			{
 				"backtrace" : 4,
 				"fragment" : "D:/optical/mecanum_pid_3/STM32F103ZETX_FLASH.ld",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Inc/motor.h",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Inc/robot.h",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Inc/encoder.h",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Inc/mecanum.h",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Src/motor.cpp",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Src/mecanum.cpp",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Src/encoder.cpp",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Inc/PID.h",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Src/PID.cpp",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 4,
-				"fragment" : "Core/Src/robot.cpp",
 				"role" : "flags"
 			}
 		],
