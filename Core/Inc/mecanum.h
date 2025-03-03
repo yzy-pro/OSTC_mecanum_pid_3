@@ -8,6 +8,9 @@ extern "C" {
 #include <cmath>
 #include "robot.h"
 
+Wheel_condition Robot2Wheel(Robot_condition);
+Robot_condition Wheel2Robot(Wheel_condition);
+
 #ifdef __cplusplus
 }
 #endif

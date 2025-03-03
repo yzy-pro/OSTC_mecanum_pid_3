@@ -4,6 +4,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+#include "math.h"
 
 #define R_of_robot ((float)1)//@@@
 #define R_of_wheel ((float)1)//@@@
@@ -12,6 +13,9 @@ extern "C" {
 #define beta (90 - alpha)
 #define theta ((float)45)//@@@
 
+    #define alpha_rad (M_PI / 180.0 * alpha )
+    #define beta_rad (M_PI / 180.0 * beta )
+    #define theta_rad (M_PI / 180.0 * theta )
 typedef struct
 {
     float x_velocity;
@@ -25,7 +29,7 @@ typedef struct
     float B_velocity;
     float C_velocity;
     float D_velocity;
-}Wheel_velocity;
+}Wheel_condition;
 
 #ifdef __cplusplus
 }
