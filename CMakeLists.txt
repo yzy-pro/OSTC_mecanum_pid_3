@@ -61,7 +61,10 @@ set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103ZETX_FLASH.ld
         Core/Inc/encoder.h
         Core/Inc/mecanum.h
         Core/Src/motor.cpp
-        Core/Src/mecanum.cpp)
+        Core/Src/mecanum.cpp
+        Core/Src/encoder.cpp
+        Core/Inc/PID.h
+        Core/Src/PID.cpp)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
 add_link_options(-mcpu=cortex-m3 -mthumb -mthumb-interwork)

@@ -93,6 +93,11 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 #define A_B_MOTOR_TIM htim1
 #define C_D_MOTOR_TIM htim8
+
+#define A_ENCODER_TIM htim2
+#define B_ENCODER_TIM htim3
+#define C_ENCODER_TIM htim4
+#define D_ENCODER_TIM htim5
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

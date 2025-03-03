@@ -51,5 +51,31 @@ Wheel_condition Robot2Wheel(Robot_condition Robot)
 
 Robot_condition Wheel2Robot(Wheel_condition Wheel)
 {
+    //@@@
     //是上面函数的反解，还没算完
+
+    //我让Chatgpt帮我反解的函数，但是还没检查，我很怀疑有错误
+
+    // 计算机器人在 X 轴和 Y 轴的速度
+    float v_x = (Wheel.A_velocity * sin(alpha_rad) + Wheel.B_velocity * sin(beta_rad) +
+                 Wheel.C_velocity * sin(alpha_rad) + Wheel.D_velocity * cos(beta_rad)) * cos(theta_rad);
+
+    float v_y = (Wheel.A_velocity * cos(alpha_rad) + Wheel.B_velocity * cos(beta_rad) +
+                 Wheel.C_velocity * cos(alpha_rad) + Wheel.D_velocity * sin(beta_rad)) * cos(theta_rad);
+
+    // 计算机器人的角速度
+    float omega = (Wheel.A_velocity * R_of_robot * cos(alpha_rad) -
+                   Wheel.B_velocity * R_of_robot * cos(beta_rad) +
+                   Wheel.C_velocity * R_of_robot * cos(alpha_rad) -
+                   Wheel.D_velocity * R_of_robot * cos(beta_rad)) /
+                  (2 * R_of_robot * (sin(alpha_rad) + sin(beta_rad)));
+
+    // 创建返回的机器人状态结构体
+    Robot_condition Robot = {
+        .x_velocity = v_x,
+        .y_velocity = v_y,
+        .omega_velocity = omega
+    };
+
+    return Robot;
 }

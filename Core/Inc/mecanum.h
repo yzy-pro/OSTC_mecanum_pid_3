@@ -5,7 +5,6 @@
 extern "C" {
 #endif
 
-#include <cmath>
 #include "robot.h"
 
 Wheel_condition Robot2Wheel(Robot_condition);
