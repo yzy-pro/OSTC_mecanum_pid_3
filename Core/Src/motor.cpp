@@ -95,3 +95,11 @@ void motor_control(const int name, int speed)
         }
     }
 }
+
+void motors_control(Wheel_pwm pwm)
+{
+    motor_control('A', pwm.A_velocity);
+    motor_control('B', pwm.B_velocity);
+    motor_control('C', pwm.C_velocity);
+    motor_control('D', pwm.D_velocity);
+}

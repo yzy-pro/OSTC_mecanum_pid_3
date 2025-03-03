@@ -4,7 +4,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
+#include "robot.h"
 #define PID_rate 50//@@@
 
 typedef struct
@@ -16,6 +16,7 @@ typedef struct
 }PID;
 
 int velocity_PID(float target, float current);
+Wheel_pwm velovity_control(Wheel_condition target, Wheel_condition current);
 
 #ifdef __cplusplus
 }

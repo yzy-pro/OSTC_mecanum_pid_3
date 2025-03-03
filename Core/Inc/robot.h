@@ -31,6 +31,24 @@ typedef struct
     float D_velocity;
 }Wheel_condition;
 
+typedef struct
+{
+    int A_velocity;
+    int B_velocity;
+    int C_velocity;
+    int D_velocity;
+}Wheel_pwm;
+
+typedef struct
+{
+    float speed;
+    float angle;
+    float omega;
+}Settings;
+
+
+void robot_control(Settings setting);
+void robot_updatecondition()
 #ifdef __cplusplus
 }
 #endif

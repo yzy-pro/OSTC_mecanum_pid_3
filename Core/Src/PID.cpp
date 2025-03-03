@@ -24,3 +24,19 @@ int velocity_PID(float target, float current)
 
     return pwm_velocity;
 }
+
+Wheel_pwm velovity_control(Wheel_condition target, Wheel_condition current)
+{
+    int pwm_A = velocity_PID(target.A_velocity, current.A_velocity);
+    int pwm_B = velocity_PID(target.B_velocity, current.B_velocity);
+    int pwm_C = velocity_PID(target.C_velocity, current.C_velocity);
+    int pwm_D = velocity_PID(target.D_velocity, current.D_velocity);
+
+    Wheel_pwm pwm_setting = {
+    .A_velocity = pwm_A,
+    .B_velocity = pwm_B,
+    .C_velocity = pwm_C,
+    .D_velocity = pwm_D,};
+
+    return pwm_setting;
+}

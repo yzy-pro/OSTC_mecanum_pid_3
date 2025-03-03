@@ -79,3 +79,17 @@ Robot_condition Wheel2Robot(Wheel_condition Wheel)
 
     return Robot;
 }
+
+Robot_condition Setting2Robot(Settings setting)
+{
+    float v_x = setting.speed * cos(setting.angle * M_PI / 180);
+    float v_y = setting.speed * sin(setting.angle * M_PI / 180);
+
+    Robot_condition Robot = {
+        .x_velocity = v_x,
+        .y_velocity = v_y,
+        .omega_velocity = setting.omega
+    };
+
+    return Robot;
+}
