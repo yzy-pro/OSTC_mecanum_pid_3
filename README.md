@@ -36,4 +36,8 @@ C---D
 # 核心流程
 参考[robot.cpp](Core/Src/robot.cpp)中robot_control函数的注释
 
+# 进一步开发思路
+* 增加位置PID，串级PID增加调控准确度
+* 研究能够直接旋转一定角度而不依赖速度的函数
+* 
 ## 理论完成，等着实践修bug吧
