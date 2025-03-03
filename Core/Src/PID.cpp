@@ -9,6 +9,9 @@ int velocity_PID(float target, float current)
         .error_limit = 0,
     };//@@@
 
+    static float last_current{}, filter_parameters = 0.3;
+    current = current * filter_parameters + last_current * (1 - filter_parameters);
+
     static float bias{}, last_bias{}, sum_bias{};
     int pwm_velocity{};
 
@@ -27,6 +30,7 @@ int velocity_PID(float target, float current)
 
 Wheel_pwm velovity_control(Wheel_condition target, Wheel_condition current)
 {
+
     int pwm_A = velocity_PID(target.A_velocity, current.A_velocity);
     int pwm_B = velocity_PID(target.B_velocity, current.B_velocity);
     int pwm_C = velocity_PID(target.C_velocity, current.C_velocity);
