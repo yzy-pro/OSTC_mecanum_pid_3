@@ -19,19 +19,20 @@ void motor_control(const int name, int speed)
     {
         if (speed == 0)
         {
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_1_Pin, abs_max_speed);
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_2_Pin, abs_max_speed);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_CHANNEL_1, 
+            abs_max_speed);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_CHANNEL_2, abs_max_speed);
         }
         else if (speed > 0)
         {
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_1_Pin, speed);
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_2_Pin, 0);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_CHANNEL_1, speed);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_CHANNEL_2, 0);
         }
         else if (speed < -0)
         {
             speed = -speed;
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_1_Pin, 0);
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_2_Pin, speed);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_CHANNEL_1, 0);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, A_MOTOR_CHANNEL_2, speed);
         }
 
     }
@@ -39,19 +40,19 @@ void motor_control(const int name, int speed)
     {
         if (speed == 0)
         {
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_1_Pin, abs_max_speed);
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_2_Pin, abs_max_speed);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_CHANNEL_1, abs_max_speed);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_CHANNEL_2, abs_max_speed);
         }
         else if (speed > 0)
         {
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_1_Pin, speed);
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_2_Pin, 0);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_CHANNEL_1, speed);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_CHANNEL_2, 0);
         }
         else if (speed < -0)
         {
             speed = -speed;
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_1_Pin, 0);
-            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_2_Pin, speed);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_CHANNEL_1, 0);
+            __HAL_TIM_SetCompare(&A_B_MOTOR_TIM, B_MOTOR_CHANNEL_2, speed);
         }
 
     }
@@ -59,19 +60,19 @@ void motor_control(const int name, int speed)
     {
         if (speed == 0)
         {
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_1_Pin, abs_max_speed);
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_2_Pin, abs_max_speed);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_CHANNEL_1, abs_max_speed);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_CHANNEL_2, abs_max_speed);
         }
         else if (speed > 0)
         {
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_1_Pin, speed);
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_2_Pin, 0);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_CHANNEL_1, speed);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_CHANNEL_2, 0);
         }
         else if (speed < -0)
         {
             speed = -speed;
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_1_Pin, 0);
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_2_Pin, speed);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_CHANNEL_1, 0);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, C_MOTOR_CHANNEL_2, speed);
         }
 
     }
@@ -79,19 +80,19 @@ void motor_control(const int name, int speed)
     {
         if (speed == 0)
         {
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_1_Pin, abs_max_speed);
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_2_Pin, abs_max_speed);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_CHANNEL_1, abs_max_speed);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_CHANNEL_2, abs_max_speed);
         }
         else if (speed > 0)
         {
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_1_Pin, speed);
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_2_Pin, 0);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_CHANNEL_1, speed);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_CHANNEL_2, 0);
         }
         else if (speed < -0)
         {
             speed = -speed;
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_1_Pin, 0);
-            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_2_Pin, speed);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_CHANNEL_1, 0);
+            __HAL_TIM_SetCompare(&C_D_MOTOR_TIM, D_MOTOR_CHANNEL_2, speed);
         }
     }
 }

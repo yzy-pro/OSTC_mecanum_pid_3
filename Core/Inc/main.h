@@ -28,7 +28,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f1xx_hal.h"
-
+#include "tim.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -93,6 +93,14 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 #define A_B_MOTOR_TIM htim1
 #define C_D_MOTOR_TIM htim8
+#define A_MOTOR_CHANNEL_1 TIM_CHANNEL_1
+#define A_MOTOR_CHANNEL_2 TIM_CHANNEL_2
+#define B_MOTOR_CHANNEL_1 TIM_CHANNEL_3
+#define B_MOTOR_CHANNEL_2 TIM_CHANNEL_4
+#define C_MOTOR_CHANNEL_1 TIM_CHANNEL_1
+#define C_MOTOR_CHANNEL_2 TIM_CHANNEL_2
+#define D_MOTOR_CHANNEL_1 TIM_CHANNEL_3
+#define D_MOTOR_CHANNEL_2 TIM_CHANNEL_4
 
 #define A_ENCODER_TIM htim2
 #define B_ENCODER_TIM htim3
