@@ -2,6 +2,8 @@
 #include "robot.h"
 #include <cmath>
 
+//如果能够定死45度，可以大幅简化代码
+//如果内存够用，可以奢侈一下双精度浮点
 Wheel_condition Robot2Wheel(Robot_condition Robot)
 {
     //A
