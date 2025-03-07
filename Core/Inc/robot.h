@@ -48,6 +48,7 @@ typedef struct
 
 
 void robot_control(Settings setting);
+void robot_init();
 #ifdef __cplusplus
 }
 #endif

@@ -1,4 +1,3 @@
-
 #ifndef MYTIMER_H
 #define MYTIMER_H
 

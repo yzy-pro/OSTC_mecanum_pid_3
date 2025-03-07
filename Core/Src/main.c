@@ -100,7 +100,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
+  robot_init();
   while (1)
   {
     //假定我通过其他部分的代码算出来我期望的速度是什么
