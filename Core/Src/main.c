@@ -24,6 +24,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "robot.h"
+#include "mytimer.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,8 +105,11 @@ int main(void)
   {
     //假定我通过其他部分的代码算出来我期望的速度是什么
     //@@@
-    Settings mysetting = {0, 0, 0};
-    robot_control(mysetting);
+    if (encoder_timer())
+    {
+      Settings mysetting = {0, 0, 0};
+      robot_control(mysetting);
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
